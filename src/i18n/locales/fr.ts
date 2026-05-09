@@ -1,0 +1,102 @@
+export const fr = {
+  nav: {
+    home: "Accueil",
+    about: "Qui sommes-nous",
+    residence: "Notre Résidence",
+    contact: "Contact",
+  },
+  common: {
+    discover: "Découvrir la Résidence",
+    viewTour: "Visite 3D",
+    contactUs: "Nous Contacter",
+    learnMore: "En savoir plus",
+    callNow: "Appeler",
+    viewOnMap: "Voir sur Google Maps",
+    language: "Langue",
+  },
+  hero: {
+    brand: "Hamid Immobilier",
+    title: "Résidence Le Rosier",
+    slogan: "Vivre autrement. Élégance moderne, confort intemporel, sécurité au quotidien.",
+  },
+  about: {
+    title: "Qui sommes-nous",
+    eyebrow: "EURL Hamid Immo · Promotion Immobilière",
+    body: "Nous réalisons des projets immobiliers de qualité, alliant confort et modernité. Faites confiance à notre expertise pour un investissement sûr et durable.",
+    pillars: {
+      quality: { title: "Qualité", desc: "Des matériaux nobles et une exécution irréprochable." },
+      modernity: { title: "Modernité", desc: "Une architecture contemporaine pensée pour bien vivre." },
+      trust: { title: "Confiance", desc: "Un investissement sûr, durable et transparent." },
+    },
+  },
+  residence: {
+    title: "Résidence Le Rosier",
+    subtitle: "Un cadre d’exception entre montagne et mer",
+    facts: {
+      address: { label: "Adresse", value: "Ait Mendil — Beni Ksila, Béjaïa" },
+      units: { label: "Logements", value: "135 logements" },
+      blocks: { label: "Blocs", value: "5 blocs : A, B, C, D, E" },
+      road: { label: "RN24", value: "À 200 m de la route nationale" },
+      beach: { label: "Plage", value: "À 400 m de la plage d’Ait Mendil" },
+      elevator: { label: "Ascenseur", value: "Ascenseur panoramique par bloc" },
+      parking: { label: "Parking", value: "Parking en sous-sol" },
+      pool: { label: "Piscine", value: "Piscine commune" },
+    },
+    architecture: {
+      title: "Architecture",
+      ab: {
+        title: "Bâtiments A & B",
+        items: [
+          "9 locaux commerciaux",
+          "4 appartements F3 par étage",
+          "Façade unique",
+        ],
+      },
+      cde: {
+        title: "Bâtiments C, D & E",
+        items: [
+          "F3 à double façade",
+          "F2 à façade unique donnant sur la piscine",
+          "4 appartements par étage : 2 F3 et 2 F2",
+        ],
+      },
+    },
+    docs: {
+      title: "Documents techniques",
+      subtitle: "Plans, plans de masse, dimensions et codes couleurs.",
+      soon: "Bientôt disponible",
+      open: "Ouvrir",
+      items: {
+        overview: "Vue d’ensemble",
+        parking: "Parking",
+        a: "Bâtiment A",
+        b: "Bâtiment B",
+        c: "Bâtiment C",
+        d: "Bâtiment D",
+        e: "Bâtiment E",
+      },
+    },
+    tour: {
+      title: "Visite 3D — Kuula",
+      subtitle: "Explorez la résidence en immersion totale.",
+      cta: "Lancer la visite complète",
+      soon: "La visite 3D sera bientôt disponible.",
+    },
+  },
+  contact: {
+    title: "Contact & Localisation",
+    subtitle: "Notre équipe est à votre écoute.",
+    team: "Notre équipe",
+    follow: "Suivez-nous",
+    location: "Localisation",
+    locationDesc: "Résidence Le Rosier — Ait Mendil, Beni Ksila, Béjaïa.",
+    soonMap: "La carte interactive sera ajoutée prochainement.",
+  },
+  footer: {
+    tagline: "Promotion immobilière de prestige.",
+    rights: "Tous droits réservés.",
+    nav: "Navigation",
+    contact: "Contact",
+    follow: "Suivez-nous",
+  },
+};
