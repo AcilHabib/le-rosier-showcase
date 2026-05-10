@@ -120,7 +120,10 @@ function ResidencePage() {
       </section>
 
       <PdfExplorer />
-      <KuulaTour />
+      <KuulaTour
+        embedUrl="https://kuula.co/share/collection/71kyb?logo=1&info=1&fs=1&vr=0&zoom=1&autorotate=-0.08&autop=15&thumbs=1&alpha=0.60&inst=fr"
+        fullUrl="https://kuula.co/share/collection/71kyb?logo=1&info=1&fs=1&vr=0&zoom=1&autorotate=-0.08&autop=15&thumbs=1&alpha=0.60&inst=fr"
+      />
     </>
   );
 }

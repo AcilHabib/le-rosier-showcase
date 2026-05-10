@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const { t } = useTranslation();
@@ -60,6 +61,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <LanguageSwitcher />
           <button
             aria-label="Menu"

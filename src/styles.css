@@ -142,3 +142,23 @@
     );
   }
 }
+
+/* ── Theme transition ──────────────────────────────────────────────────────
+   Applied only while the user is switching themes (class added/removed via
+   JS in ~500ms). This avoids performance cost of always having transitions
+   on every property, while still giving a smooth, cinematic feel.
+   ───────────────────────────────────────────────────────────────────────── */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition:
+    background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-delay: 0s !important;
+}

@@ -99,4 +99,10 @@ export const fr = {
     contact: "Contact",
     follow: "Suivez-nous",
   },
+  theme: {
+    toggle: "Changer le thème",
+    light: "Clair",
+    dark: "Sombre",
+    system: "Système",
+  },
 };

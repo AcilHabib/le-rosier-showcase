@@ -1,22 +1,30 @@
 // Future-ready data layer. When wiring Prisma + MongoDB, replace these
 // constants with server-fn fetches that return the same shapes.
 
+import overviewUrl from "@/assets/pdfs/OVERVEW.pdf?url";
+import parkingUrl from "@/assets/pdfs/parking.pdf?url";
+import batimentAUrl from "@/assets/pdfs/Batiment A.pdf?url";
+import batimentBUrl from "@/assets/pdfs/Batiment B.pdf?url";
+import batimentCUrl from "@/assets/pdfs/Batiment C.pdf?url";
+import batimentDUrl from "@/assets/pdfs/Batiment D.pdf?url";
+import batimentEUrl from "@/assets/pdfs/Batiment E.pdf?url";
+
 export type PdfDocId = "overview" | "parking" | "a" | "b" | "c" | "d" | "e";
 
 export interface PdfDocument {
   id: PdfDocId;
   i18nKey: string; // residence.docs.items.<key>
-  url?: string; // to be filled when PDFs are uploaded
+  url?: string;
 }
 
 export const pdfDocuments: PdfDocument[] = [
-  { id: "overview", i18nKey: "overview" },
-  { id: "parking", i18nKey: "parking" },
-  { id: "a", i18nKey: "a" },
-  { id: "b", i18nKey: "b" },
-  { id: "c", i18nKey: "c" },
-  { id: "d", i18nKey: "d" },
-  { id: "e", i18nKey: "e" },
+  { id: "overview", i18nKey: "overview", url: overviewUrl },
+  { id: "parking", i18nKey: "parking", url: parkingUrl },
+  { id: "a", i18nKey: "a", url: batimentAUrl },
+  { id: "b", i18nKey: "b", url: batimentBUrl },
+  { id: "c", i18nKey: "c", url: batimentCUrl },
+  { id: "d", i18nKey: "d", url: batimentDUrl },
+  { id: "e", i18nKey: "e", url: batimentEUrl },
 ];
 
 export interface ContactPerson {

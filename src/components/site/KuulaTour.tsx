@@ -14,7 +14,7 @@ export function KuulaTour({ embedUrl, fullUrl }: Props) {
   return (
     <section id="tour" className="container-luxury py-24">
       <Reveal>
-        <p className="text-xs uppercase tracking-[0.32em] text-primary/70">Kuula</p>
+        <p className="text-xs uppercase tracking-[0.32em] text-primary/70"></p>
         <h2 className="font-display mt-3 text-3xl md:text-5xl text-balance">
           {t("residence.tour.title")}
         </h2>
@@ -29,7 +29,7 @@ export function KuulaTour({ embedUrl, fullUrl }: Props) {
             {embedUrl ? (
               <iframe
                 src={embedUrl}
-                title="Kuula 3D Tour"
+                title="3D Tour"
                 allow="fullscreen; vr; xr-spatial-tracking"
                 className="h-full w-full"
               />

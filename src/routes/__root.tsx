@@ -15,6 +15,11 @@ import "../i18n";
 import { RTL_LANGS, type Lang } from "../i18n";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
+import { ThemeProvider } from "../hooks/use-theme";
+
+// Blocking inline script — runs before first paint to prevent FOUC.
+// Reads localStorage and applies the `dark` class to <html> immediately.
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})();`;
 
 function NotFoundComponent() {
   return (
@@ -92,6 +97,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" dir="ltr">
       <head>
+        {/* Anti-FOUC script must run before any CSS / paint */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <HeadContent />
       </head>
       <body>
@@ -116,15 +123,17 @@ function I18nDirSync() {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
-    <QueryClientProvider client={queryClient}>
-      <I18nDirSync />
-      <div className="flex min-h-screen flex-col bg-background">
-        <Navbar />
-        <main className="flex-1">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
-    </QueryClientProvider>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <I18nDirSync />
+        <div className="flex min-h-screen flex-col bg-background">
+          <Navbar />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }

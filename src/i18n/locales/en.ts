@@ -77,7 +77,7 @@ export const en = {
       },
     },
     tour: {
-      title: "3D Tour — Kuula",
+      title: "3D Tour",
       subtitle: "Explore the residence in full immersion.",
       cta: "Launch the full tour",
       soon: "The 3D tour will be available soon.",
@@ -98,5 +98,11 @@ export const en = {
     nav: "Navigation",
     contact: "Contact",
     follow: "Follow us",
+  },
+  theme: {
+    toggle: "Toggle theme",
+    light: "Light",
+    dark: "Dark",
+    system: "System",
   },
 };
