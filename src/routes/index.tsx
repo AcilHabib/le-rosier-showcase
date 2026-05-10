@@ -5,6 +5,16 @@ import { Hero } from "@/components/site/Hero";
 import { Reveal } from "@/components/site/Reveal";
 import residence1 from "@/assets/residence-1.png";
 import residence2 from "@/assets/residence-2.png";
+import residence3 from "@/assets/residence-3.png";
+import residence4 from "@/assets/residence-4.png";
+import residence5 from "@/assets/residence-5.png";
+import residence6 from "@/assets/residence-6.png";
+import residence7 from "@/assets/residence-7.png";
+import residence8 from "@/assets/residence-8.png";
+import residence9 from "@/assets/residence-9.png";
+import residence10 from "@/assets/residence-10.png";
+import residence11 from "@/assets/residence-11.png";
+import residence12 from "@/assets/residence-12.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -98,6 +108,44 @@ function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="container-luxury py-24 md:py-32">
+        <Reveal>
+          <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
+            {t("residence.architecture.title")}
+          </p>
+          <h3 className="font-display mt-3 text-3xl md:text-4xl text-balance">
+            {t("residence.subtitle")}
+          </h3>
+        </Reveal>
+        <div className="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4">
+          {[
+            residence3, residence4, residence5, residence6,
+            residence7, residence8, residence9, residence10,
+            residence11, residence12,
+          ].map((src, i) => (
+            <Reveal key={i} delay={i * 0.04}>
+              <img
+                src={src}
+                alt={`Residence Le Rosier — photo ${i + 3}`}
+                className="mb-4 w-full rounded-xl object-cover shadow-sm transition hover:shadow-elegant break-inside-avoid"
+              />
+            </Reveal>
+          ))}
+        </div>
+        <Reveal>
+          <div className="mt-8 text-center">
+            <Link
+              to="/residence"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary"
+            >
+              {t("common.discover")}
+              <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+            </Link>
+          </div>
+        </Reveal>
       </section>
 
       {/* CTA */}
