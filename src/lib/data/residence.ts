@@ -51,3 +51,6 @@ export const socials = {
 // Replace with the exact coordinates / Maps embed URL once provided.
 export const mapsLink =
   "https://www.google.com/maps/search/?api=1&query=Ait+Mendil+Beni+Ksila+Bejaia";
+
+export const agencyMapsLink =
+  "https://www.google.com/maps/search/?api=1&query=Cit%C3%A9+Somacob+B%C3%A9ja%C3%AFa+Algeria";

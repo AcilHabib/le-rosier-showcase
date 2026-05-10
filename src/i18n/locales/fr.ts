@@ -90,6 +90,8 @@ export const fr = {
     follow: "Suivez-nous",
     location: "Localisation",
     locationDesc: "Résidence Le Rosier — Ait Mendil, Beni Ksila, Béjaïa.",
+    agencyLocation: "Notre bureau",
+    agencyLocationDesc: "Hamid Immobilier — Cité Somacob, Béjaïa.",
     soonMap: "La carte interactive sera ajoutée prochainement.",
   },
   footer: {

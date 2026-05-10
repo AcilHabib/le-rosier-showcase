@@ -90,6 +90,8 @@ export const ar = {
     follow: "تابعنا",
     location: "الموقع",
     locationDesc: "إقامة لو روزييه — آيت منديل، بني كسيلة، بجاية.",
+    agencyLocation: "مكتبنا",
+    agencyLocationDesc: "حميد العقارية — سيتي سوماكوب، بجاية.",
     soonMap: "ستتم إضافة الخريطة التفاعلية قريباً.",
   },
   footer: {

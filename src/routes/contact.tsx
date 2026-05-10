@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { Phone, Facebook, Instagram, MapPin, ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import { contacts, socials, mapsLink } from "@/lib/data/residence";
+import { contacts, socials, mapsLink, agencyMapsLink } from "@/lib/data/residence";
+import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -23,16 +24,25 @@ function ContactPage() {
 
   return (
     <>
-      <section className="container-luxury pt-24 pb-12">
-        <Reveal>
-          <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
-            Hamid Immobilier
-          </p>
-          <h1 className="font-display mt-3 text-4xl md:text-6xl text-balance">
-            {t("contact.title")}
-          </h1>
-          <p className="mt-4 max-w-xl text-muted-foreground">{t("contact.subtitle")}</p>
-        </Reveal>
+      <section className="relative h-[55vh] min-h-[380px] w-full overflow-hidden">
+        <div className="absolute inset-0 bg-foreground/5" />
+        <div className="absolute inset-0 gradient-overlay" />
+        <div className="container-luxury relative z-10 flex h-full flex-col items-center justify-center gap-6 text-center">
+          <Reveal>
+            <img
+              src={logo}
+              alt="Hamid Immobilier"
+              className="mx-auto h-24 w-24 object-contain drop-shadow-xl"
+            />
+            <p className="mt-5 text-xs uppercase tracking-[0.4em] text-foreground/60">
+              Hamid Immobilier
+            </p>
+            <h1 className="font-display mt-3 text-5xl text-foreground md:text-6xl">
+              {t("contact.title")}
+            </h1>
+            <p className="mt-4 max-w-xl text-muted-foreground">{t("contact.subtitle")}</p>
+          </Reveal>
+        </div>
       </section>
 
       {/* Team contacts */}
@@ -104,52 +114,77 @@ function ContactPage() {
         </Reveal>
       </section>
 
-      {/* Map */}
+      {/* Maps — side by side */}
       <section className="container-luxury pb-24">
-        <Reveal>
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
-                {t("contact.location")}
-              </p>
-              <h2 className="font-display mt-2 text-3xl md:text-4xl">
-                {t("contact.locationDesc")}
-              </h2>
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* Residence */}
+          <Reveal>
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
+                  {t("contact.location")}
+                </p>
+                <h2 className="font-display mt-2 text-2xl md:text-3xl">
+                  {t("contact.locationDesc")}
+                </h2>
+              </div>
+              <a
+                href={mapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="shrink-0 inline-flex items-center gap-1.5 rounded-full border border-border/70 px-3 py-1.5 text-xs hover:border-primary/40"
+              >
+                <MapPin className="h-3.5 w-3.5 text-primary" />
+                <ExternalLink className="h-3 w-3" />
+              </a>
             </div>
-            <a
-              href={mapsLink}
-              target="_blank"
-              rel="noreferrer"
-              className="hidden md:inline-flex items-center gap-2 rounded-full border border-border/70 px-4 py-2 text-sm hover:border-primary/40"
-            >
-              <MapPin className="h-4 w-4 text-primary" />
-              {t("common.viewOnMap")}
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
-          </div>
-
-          <div className="mt-8 overflow-hidden rounded-3xl border border-border/70 shadow-elegant">
-            <div className="aspect-[16/9] w-full bg-muted">
-              <iframe
-                title="Residence Le Rosier — Ait Mendil"
-                src="https://www.google.com/maps?q=Ait+Mendil+Beni+Ksila+Bejaia&output=embed"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-full w-full"
-              />
+            <div className="mt-5 overflow-hidden rounded-2xl border border-border/70 shadow-elegant">
+              <div className="aspect-[4/3] w-full bg-muted">
+                <iframe
+                  title="Residence Le Rosier — Ait Mendil"
+                  src="https://www.google.com/maps?q=Ait+Mendil+Beni+Ksila+Bejaia&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-full w-full"
+                />
+              </div>
             </div>
-          </div>
+          </Reveal>
 
-          <a
-            href={mapsLink}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex md:hidden items-center gap-2 text-sm text-primary"
-          >
-            <MapPin className="h-4 w-4" />
-            {t("common.viewOnMap")}
-          </a>
-        </Reveal>
+          {/* Agency office */}
+          <Reveal delay={0.08}>
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
+                  {t("contact.agencyLocation")}
+                </p>
+                <h2 className="font-display mt-2 text-2xl md:text-3xl">
+                  {t("contact.agencyLocationDesc")}
+                </h2>
+              </div>
+              <a
+                href={agencyMapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="shrink-0 inline-flex items-center gap-1.5 rounded-full border border-border/70 px-3 py-1.5 text-xs hover:border-primary/40"
+              >
+                <MapPin className="h-3.5 w-3.5 text-primary" />
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
+            <div className="mt-5 overflow-hidden rounded-2xl border border-border/70 shadow-elegant">
+              <div className="aspect-[4/3] w-full bg-muted">
+                <iframe
+                  title="Hamid Immobilier — Cité Somacob, Béjaïa"
+                  src="https://www.google.com/maps?q=36.744843,5.050385&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-full w-full"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </section>
     </>
   );

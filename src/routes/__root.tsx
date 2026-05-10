@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import appCss from "../styles.css?url";
+import logoUrl from "../assets/logo.png?url";
 import "../i18n";
 import { RTL_LANGS, type Lang } from "../i18n";
 import { Navbar } from "../components/site/Navbar";
@@ -78,6 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
     ],
     links: [
+      { rel: "icon", href: logoUrl, type: "image/png" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },

@@ -8,6 +8,7 @@ import { PdfExplorer } from "@/components/site/PdfExplorer";
 import { KuulaTour } from "@/components/site/KuulaTour";
 import residence1 from "@/assets/residence-1.png";
 import residence2 from "@/assets/residence-2.png";
+import residence5 from "@/assets/residence-5.png";
 
 export const Route = createFileRoute("/residence")({
   head: () => ({
@@ -92,7 +93,7 @@ function ResidencePage() {
                 <article className="group relative overflow-hidden rounded-3xl border border-border/70 bg-card shadow-soft">
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
-                      src={k === "ab" ? residence1 : residence2}
+                      src={k === "ab" ? residence5 : residence1}
                       alt=""
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
