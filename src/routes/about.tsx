@@ -34,9 +34,7 @@ function AboutPage() {
         <div className="absolute inset-0 gradient-overlay" />
         <div className="container-luxury relative z-10 flex h-full flex-col justify-end pb-16">
           <Reveal>
-            <p className="text-xs uppercase tracking-[0.4em] text-white/80">
-              {t("about.eyebrow")}
-            </p>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/80">{t("about.eyebrow")}</p>
             <h1 className="font-display mt-3 text-5xl text-white md:text-6xl">
               {t("about.title")}
             </h1>
@@ -58,9 +56,7 @@ function AboutPage() {
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="font-display mt-5 text-2xl">
-                  {t(`about.pillars.${key}.title`)}
-                </h3>
+                <h3 className="font-display mt-5 text-2xl">{t(`about.pillars.${key}.title`)}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   {t(`about.pillars.${key}.desc`)}
                 </p>

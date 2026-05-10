@@ -18,9 +18,7 @@ export function KuulaTour({ embedUrl, fullUrl }: Props) {
         <h2 className="font-display mt-3 text-3xl md:text-5xl text-balance">
           {t("residence.tour.title")}
         </h2>
-        <p className="mt-3 max-w-2xl text-muted-foreground">
-          {t("residence.tour.subtitle")}
-        </p>
+        <p className="mt-3 max-w-2xl text-muted-foreground">{t("residence.tour.subtitle")}</p>
       </Reveal>
 
       <Reveal delay={0.1}>

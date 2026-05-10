@@ -108,9 +108,7 @@ export function ThemeToggle() {
                 >
                   <Icon className="h-[1rem] w-[1rem] shrink-0" />
                   <span className="flex-1 text-start">{t(labelKey)}</span>
-                  {isActive && (
-                    <Check className="ms-auto h-3.5 w-3.5 text-primary shrink-0" />
-                  )}
+                  {isActive && <Check className="ms-auto h-3.5 w-3.5 text-primary shrink-0" />}
                 </button>
               );
             })}

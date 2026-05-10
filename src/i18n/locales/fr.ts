@@ -25,7 +25,10 @@ export const fr = {
     body: "Nous réalisons des projets immobiliers de qualité, alliant confort et modernité. Faites confiance à notre expertise pour un investissement sûr et durable.",
     pillars: {
       quality: { title: "Qualité", desc: "Des matériaux nobles et une exécution irréprochable." },
-      modernity: { title: "Modernité", desc: "Une architecture contemporaine pensée pour bien vivre." },
+      modernity: {
+        title: "Modernité",
+        desc: "Une architecture contemporaine pensée pour bien vivre.",
+      },
       trust: { title: "Confiance", desc: "Un investissement sûr, durable et transparent." },
     },
   },
@@ -46,11 +49,7 @@ export const fr = {
       title: "Architecture",
       ab: {
         title: "Bâtiments A & B",
-        items: [
-          "9 locaux commerciaux",
-          "4 appartements F3 par étage",
-          "Façade unique",
-        ],
+        items: ["9 locaux commerciaux", "4 appartements F3 par étage", "Façade unique"],
       },
       cde: {
         title: "Bâtiments C, D & E",

@@ -24,10 +24,26 @@ export function Footer() {
             {t("footer.nav")}
           </h4>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/" className="hover:text-primary">{t("nav.home")}</Link></li>
-            <li><Link to="/about" className="hover:text-primary">{t("nav.about")}</Link></li>
-            <li><Link to="/residence" className="hover:text-primary">{t("nav.residence")}</Link></li>
-            <li><Link to="/contact" className="hover:text-primary">{t("nav.contact")}</Link></li>
+            <li>
+              <Link to="/" className="hover:text-primary">
+                {t("nav.home")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-primary">
+                {t("nav.about")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/residence" className="hover:text-primary">
+                {t("nav.residence")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-primary">
+                {t("nav.contact")}
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -39,7 +55,9 @@ export function Footer() {
             {contacts.slice(0, 3).map((c) => (
               <li key={c.phone} className="flex items-center gap-2 text-foreground/80">
                 <Phone className="h-3.5 w-3.5 text-primary" />
-                <a href={`tel:${c.phone}`} className="hover:text-primary">{c.display}</a>
+                <a href={`tel:${c.phone}`} className="hover:text-primary">
+                  {c.display}
+                </a>
               </li>
             ))}
             <li className="flex items-start gap-2 text-foreground/80">
@@ -78,7 +96,9 @@ export function Footer() {
 
       <div className="border-t border-border/60">
         <div className="container-luxury flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground md:flex-row">
-          <p>© {year} Hamid Immobilier. {t("footer.rights")}</p>
+          <p>
+            © {year} Hamid Immobilier. {t("footer.rights")}
+          </p>
           <p className="font-display tracking-wide">Résidence Le Rosier</p>
         </div>
       </div>

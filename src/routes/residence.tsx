@@ -1,7 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import {
-  MapPin, Home, Building2, Route as RouteIcon, Waves, ArrowUpDown, Car, Sun,
+  MapPin,
+  Home,
+  Building2,
+  Route as RouteIcon,
+  Waves,
+  ArrowUpDown,
+  Car,
+  Sun,
 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { PdfExplorer } from "@/components/site/PdfExplorer";
@@ -45,9 +52,7 @@ function ResidencePage() {
         <div className="absolute inset-0 gradient-overlay" />
         <div className="container-luxury relative z-10 flex h-full flex-col justify-end pb-16">
           <Reveal>
-            <p className="text-xs uppercase tracking-[0.4em] text-white/80">
-              Hamid Immobilier
-            </p>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/80">Hamid Immobilier</p>
             <h1 className="font-display mt-3 text-5xl text-white md:text-7xl text-balance">
               {t("residence.title")}
             </h1>
@@ -103,14 +108,14 @@ function ResidencePage() {
                       {t(`residence.architecture.${k}.title`)}
                     </h3>
                     <ul className="mt-5 space-y-2.5">
-                      {(t(`residence.architecture.${k}.items`, { returnObjects: true }) as string[]).map(
-                        (it) => (
-                          <li key={it} className="flex items-start gap-3 text-sm text-foreground/85">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                            {it}
-                          </li>
-                        ),
-                      )}
+                      {(
+                        t(`residence.architecture.${k}.items`, { returnObjects: true }) as string[]
+                      ).map((it) => (
+                        <li key={it} className="flex items-start gap-3 text-sm text-foreground/85">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                          {it}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </article>

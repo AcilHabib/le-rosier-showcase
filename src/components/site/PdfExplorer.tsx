@@ -1,12 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { FileText, ExternalLink } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { pdfDocuments, type PdfDocument } from "@/lib/data/residence";
 import { Reveal } from "./Reveal";
 
@@ -23,9 +18,7 @@ export function PdfExplorer() {
         <h2 className="font-display mt-3 text-3xl md:text-5xl text-balance">
           {t("residence.docs.title")}
         </h2>
-        <p className="mt-3 max-w-2xl text-muted-foreground">
-          {t("residence.docs.subtitle")}
-        </p>
+        <p className="mt-3 max-w-2xl text-muted-foreground">{t("residence.docs.subtitle")}</p>
       </Reveal>
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -64,11 +57,7 @@ export function PdfExplorer() {
           </DialogHeader>
           <div className="aspect-[4/3] w-full overflow-hidden rounded-lg border border-border bg-muted">
             {active?.url ? (
-              <iframe
-                src={active.url}
-                title={active.id}
-                className="h-full w-full"
-              />
+              <iframe src={active.url} title={active.id} className="h-full w-full" />
             ) : (
               <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
                 <FileText className="h-10 w-10 text-muted-foreground" />

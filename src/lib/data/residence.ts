@@ -43,8 +43,7 @@ export const contacts: ContactPerson[] = [
 ];
 
 export const socials = {
-  facebook:
-    "https://www.facebook.com/profile.php?id=61574057414236",
+  facebook: "https://www.facebook.com/profile.php?id=61574057414236",
   instagram: "https://www.instagram.com/hamid_immobilier/",
 };
 

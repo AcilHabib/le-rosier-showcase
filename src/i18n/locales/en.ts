@@ -25,7 +25,10 @@ export const en = {
     body: "We deliver high-quality real estate projects that blend comfort and modernity. Trust our expertise for a safe and lasting investment.",
     pillars: {
       quality: { title: "Quality", desc: "Premium materials and flawless execution." },
-      modernity: { title: "Modernity", desc: "Contemporary architecture designed for living well." },
+      modernity: {
+        title: "Modernity",
+        desc: "Contemporary architecture designed for living well.",
+      },
       trust: { title: "Trust", desc: "A safe, lasting and transparent investment." },
     },
   },
@@ -46,11 +49,7 @@ export const en = {
       title: "Architecture",
       ab: {
         title: "Buildings A & B",
-        items: [
-          "9 commercial units",
-          "4 F3 apartments per floor",
-          "Single facade",
-        ],
+        items: ["9 commercial units", "4 F3 apartments per floor", "Single facade"],
       },
       cde: {
         title: "Buildings C, D & E",

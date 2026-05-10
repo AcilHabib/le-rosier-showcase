@@ -55,9 +55,7 @@ function HomePage() {
             <h2 className="font-display mt-3 text-4xl md:text-5xl text-balance">
               {t("residence.subtitle")}
             </h2>
-            <p className="mt-6 text-muted-foreground text-balance">
-              {t("about.body")}
-            </p>
+            <p className="mt-6 text-muted-foreground text-balance">{t("about.body")}</p>
             <Link
               to="/residence"
               className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-primary"
@@ -97,9 +95,7 @@ function HomePage() {
               <Reveal key={key} delay={i * 0.05}>
                 <div className="group h-full rounded-2xl border border-border/70 bg-card p-6 transition hover:-translate-y-1 hover:shadow-elegant">
                   <Icon className="h-7 w-7 text-primary" />
-                  <p className="mt-4 font-display text-lg">
-                    {t(`residence.facts.${key}.label`)}
-                  </p>
+                  <p className="mt-4 font-display text-lg">{t(`residence.facts.${key}.label`)}</p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {t(`residence.facts.${key}.value`)}
                   </p>
@@ -122,9 +118,16 @@ function HomePage() {
         </Reveal>
         <div className="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4">
           {[
-            residence3, residence4, residence5, residence6,
-            residence7, residence8, residence9, residence10,
-            residence11, residence12,
+            residence3,
+            residence4,
+            residence5,
+            residence6,
+            residence7,
+            residence8,
+            residence9,
+            residence10,
+            residence11,
+            residence12,
           ].map((src, i) => (
             <Reveal key={i} delay={i * 0.04}>
               <img
@@ -154,12 +157,8 @@ function HomePage() {
           <div className="relative overflow-hidden rounded-3xl bg-primary px-10 py-16 text-primary-foreground md:px-16 md:py-20">
             <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
             <div className="relative">
-              <h3 className="font-display text-3xl md:text-5xl text-balance">
-                {t("hero.title")}
-              </h3>
-              <p className="mt-4 max-w-xl text-primary-foreground/85">
-                {t("hero.slogan")}
-              </p>
+              <h3 className="font-display text-3xl md:text-5xl text-balance">{t("hero.title")}</h3>
+              <p className="mt-4 max-w-xl text-primary-foreground/85">{t("hero.slogan")}</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   to="/residence"
