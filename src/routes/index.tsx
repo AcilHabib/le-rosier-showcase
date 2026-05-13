@@ -55,7 +55,7 @@ function HomePage() {
             <h2 className="font-display mt-3 text-4xl md:text-5xl text-balance">
               {t("residence.subtitle")}
             </h2>
-            <p className="mt-6 text-muted-foreground text-balance">{t("about.body")}</p>
+            <p className="mt-6 text-muted-foreground text-balance">{t("about.summary")}</p>
             <Link
               to="/residence"
               className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-primary"

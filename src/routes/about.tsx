@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "EURL Hamid Immo · Promotion immobilière. Qualité, modernité et confiance pour un investissement durable.",
+          "EURL Hamid Immo et Groupe Bouanani · Promotion immobilière, expertise de terrain et investissement en toute confiance.",
       },
     ],
   }),
@@ -26,6 +26,19 @@ function AboutPage() {
     { icon: Building2, key: "modernity" },
     { icon: ShieldCheck, key: "trust" },
   ] as const;
+
+  const experienceProjects = [
+    "ouedGhir125",
+    "smina28",
+    "ighil198",
+    "ighil42",
+    "ongoing154",
+    "ongoing72",
+  ] as const;
+
+  const visionItems = ["comfort", "quality", "location", "investment"] as const;
+  const firstProjectItems = ["architecture", "lifestyle", "families", "investment"] as const;
+  const reasonItems = ["experience", "mastery", "timing", "guarantee", "support"] as const;
 
   return (
     <>
@@ -44,9 +57,14 @@ function AboutPage() {
 
       <section className="container-luxury py-24 md:py-32">
         <Reveal>
-          <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-foreground/85 md:text-xl text-balance">
-            {t("about.body")}
-          </p>
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-lg leading-relaxed text-foreground/85 md:text-xl text-balance">
+              {t("about.body")}
+            </p>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg text-balance">
+              {t("about.storyBody")}
+            </p>
+          </div>
         </Reveal>
 
         <div className="mt-20 grid gap-6 md:grid-cols-3">
@@ -63,6 +81,90 @@ function AboutPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-24 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <Reveal>
+            <div className="rounded-3xl border border-border/70 bg-card p-8 md:p-10">
+              <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
+                {t("about.experience.kicker")}
+              </p>
+              <h2 className="font-display mt-4 text-3xl md:text-4xl">{t("about.experience.title")}</h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">{t("about.experience.body")}</p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {experienceProjects.map((key) => (
+                  <div
+                    key={key}
+                    className="rounded-2xl border border-border/60 bg-background/70 px-5 py-4 text-sm text-foreground/85"
+                  >
+                    {t(`about.experience.projects.${key}`)}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.08}>
+            <div className="rounded-3xl bg-secondary/45 p-8 md:p-10">
+              <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
+                {t("about.firstProject.kicker")}
+              </p>
+              <h2 className="font-display mt-4 text-3xl md:text-4xl">{t("about.firstProject.title")}</h2>
+              <p className="mt-4 text-foreground/85">{t("about.firstProject.location")}</p>
+              <p className="mt-4 text-muted-foreground">{t("about.firstProject.body")}</p>
+              <div className="mt-8 space-y-3">
+                {firstProjectItems.map((key) => (
+                  <div
+                    key={key}
+                    className="rounded-2xl border border-border/60 bg-background/80 px-5 py-4 text-sm text-foreground/85"
+                  >
+                    {t(`about.firstProject.items.${key}`)}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="mt-24 grid gap-8 lg:grid-cols-2">
+          <Reveal>
+            <div className="rounded-3xl border border-border/70 bg-card p-8 md:p-10">
+              <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
+                {t("about.vision.kicker")}
+              </p>
+              <h2 className="font-display mt-4 text-3xl md:text-4xl">{t("about.vision.title")}</h2>
+              <p className="mt-4 text-muted-foreground">{t("about.vision.body")}</p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {visionItems.map((key) => (
+                  <div
+                    key={key}
+                    className="rounded-2xl border border-border/60 bg-primary/5 px-5 py-4 text-sm font-medium text-foreground/85"
+                  >
+                    {t(`about.vision.items.${key}`)}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.08}>
+            <div className="rounded-3xl border border-border/70 bg-card p-8 md:p-10">
+              <p className="text-xs uppercase tracking-[0.32em] text-primary/70">
+                {t("about.reasons.kicker")}
+              </p>
+              <h2 className="font-display mt-4 text-3xl md:text-4xl">{t("about.reasons.title")}</h2>
+              <div className="mt-8 space-y-3">
+                {reasonItems.map((key) => (
+                  <div
+                    key={key}
+                    className="rounded-2xl border border-border/60 bg-background/70 px-5 py-4 text-sm text-foreground/85"
+                  >
+                    {t(`about.reasons.items.${key}`)}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
