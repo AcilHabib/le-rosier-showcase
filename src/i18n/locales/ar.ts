@@ -148,6 +148,7 @@ export const ar = {
   footer: {
     tagline: "ترقية عقارية فاخرة.",
     rights: "جميع الحقوق محفوظة.",
+    realisedBy: "إنجاز:",
     nav: "التنقل",
     contact: "اتصل",
     follow: "تابعنا",

@@ -151,6 +151,7 @@ export const fr = {
   footer: {
     tagline: "Promotion immobilière de prestige.",
     rights: "Tous droits réservés.",
+    realisedBy: "Réalisé par :",
     nav: "Navigation",
     contact: "Contact",
     follow: "Suivez-nous",

@@ -99,7 +99,20 @@ export function Footer() {
           <p>
             © {year} Hamid Immobilier. {t("footer.rights")}
           </p>
-          <p className="font-display tracking-wide">Résidence Le Rosier</p>
+          <div className="flex flex-col items-center gap-1 md:items-end">
+            <p>
+              {t("footer.realisedBy")}{" "}
+              <a
+                href="https://algeriamarketiva.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-primary"
+              >
+                Algeria Marketiva
+              </a>
+            </p>
+            <p className="font-display tracking-wide">Résidence Le Rosier</p>
+          </div>
         </div>
       </div>
     </footer>

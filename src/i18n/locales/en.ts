@@ -151,6 +151,7 @@ export const en = {
   footer: {
     tagline: "Premium real estate development.",
     rights: "All rights reserved.",
+    realisedBy: "Realised by:",
     nav: "Navigation",
     contact: "Contact",
     follow: "Follow us",
